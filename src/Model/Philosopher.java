@@ -1,12 +1,9 @@
 package Model;
 
-import javafx.fxml.FXML;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 /**
@@ -18,25 +15,25 @@ public class Philosopher implements Runnable{
     private Chopstick leftChopstick;
     private Chopstick rightChopstick;
 
-    PrintWriter myStatisticsFile;
-    PrintWriter test = new PrintWriter("test.txt", "UTF-8");
-
     // Variables
     private Random randomNumb = new Random();
     private int philosopherNumber;
     private volatile boolean isHungry = false;
     private boolean isRunning = true;
 
+    // Time tracking variables
+    private double averageThinkingTime = 0;
+    private double averageEatingTime = 0;
+    private double averageHungryTime = 0;
+
+
     // Gui Object
     Circle circleObject;
 
-    public Philosopher(int philosopherNumber, Chopstick leftChopstick, Chopstick rightChopstick, Circle circleObject) throws FileNotFoundException, UnsupportedEncodingException {
-        myStatisticsFile = new PrintWriter("statistics.txt", "UTF-8");
+    public Philosopher(int philosopherNumber, Chopstick leftChopstick, Chopstick rightChopstick, Circle circleObject) {
         this.philosopherNumber = philosopherNumber;
         this.leftChopstick = leftChopstick;
-        this.leftChopstick.setMyStatisticsFile(myStatisticsFile);
         this.rightChopstick = rightChopstick;
-        this.rightChopstick.setMyStatisticsFile(myStatisticsFile);
         this.circleObject = circleObject;
     }
 
@@ -46,16 +43,30 @@ public class Philosopher implements Runnable{
         while (isRunning) {
             try {
                 while (isHungry) {
+
+                    // Starting our timer for time spent hungry
+                    long start1 = System.currentTimeMillis();
+
                     if (leftChopstick.isAvailable()) {
                         leftChopstick.pickUp(this, "left");
+
                         if(rightChopstick.isAvailable()){
                             rightChopstick.pickUp(this, "right");
+
+                            // Tracking the end time for time spent hungry
+                            long end1 = System.currentTimeMillis();
+
+                            // Calculating and adding the time spent hungry
+                            averageHungryTime += (end1 - start1) / 1000;
+
+                            // Eat
                             eating();
                         }
                         leftChopstick.putDown(this, "left");
                         rightChopstick.putDown(this, "right");
                     }
                     Thread.sleep(500);
+                    averageEatingTime += 0.5;
                 }
                 while (!isHungry) {
                     thinking();
@@ -73,27 +84,24 @@ public class Philosopher implements Runnable{
 
     public void eating() throws InterruptedException {
         System.out.println(this.toString() + " is eating");
-        myStatisticsFile.println(this.toString() + " is eating");
-        test.println(this.toString() + " is eating");
-        test.close();
         isHungry = false;
         this.circleObject.setFill(Paint.valueOf("#8b282a"));
         int i = randomNumb.nextInt(5000)+1000;
+        averageEatingTime += i / 1000;
         Thread.sleep(i);
     }
 
     public void thinking() throws InterruptedException {
         System.out.println(this.toString() + " is thinking");
-        myStatisticsFile.println(this.toString() + " is thinking");
         isHungry = true;
         this.circleObject.setFill(Paint.valueOf("#28e7b2"));
         int i = randomNumb.nextInt(5000)+1000;
+        averageThinkingTime += i/1000;
         Thread.sleep(i);
     }
 
     public void hungry() throws InterruptedException{
         System.out.println(this.toString() + " is hungry");
-        myStatisticsFile.println(this.toString() + " is hungry");
         this.circleObject.setFill(Paint.valueOf("#d7b3ff"));
     }
 
@@ -104,5 +112,17 @@ public class Philosopher implements Runnable{
     @Override
     public String toString(){
         return "Philosopher number " + philosopherNumber;
+    }
+
+    public double getAverageThinkingTime() {
+        return averageThinkingTime;
+    }
+
+    public double getAverageEatingTime() {
+        return averageEatingTime;
+    }
+
+    public double getAverageHungryTime() {
+        return averageHungryTime;
     }
 }

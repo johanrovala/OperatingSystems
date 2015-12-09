@@ -10,13 +10,15 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.*;
 
-import java.io.FileNotFoundException;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 
 
 public class Controller {
 
     int amountOfPhilosophers = 5;
+    StringBuilder stringBuilder = new StringBuilder();
+
+    // Java Objects
     Philosopher[] philosophers = new Philosopher[amountOfPhilosophers];
     Chopstick[] chopsticks = new Chopstick[amountOfPhilosophers];
     Thread[] threads = new Thread[amountOfPhilosophers];
@@ -53,12 +55,15 @@ public class Controller {
     private Button startButton;
     @FXML
     private Button stopButton;
-
     @FXML
     private GridPane rootLayout;
 
+    File file = new File("myStatistics.txt");
+
     @FXML
     private void startTheThreads() throws FileNotFoundException, UnsupportedEncodingException {
+        PrintStream printWriter = new PrintStream(new FileOutputStream(file));
+        System.setOut(printWriter);
 
         // Instanciate our lists of chopsticks and philosophers
         setUpCircles();
@@ -78,10 +83,15 @@ public class Controller {
     }
 
     @FXML
-    private void stopTheThreads() {
+    private void stopTheThreads() throws FileNotFoundException, UnsupportedEncodingException {
         for(int i = 0; i< amountOfPhilosophers; i++){
             philosophers[i].kill();
+           // philosophers[i].finishPrinting();
+            stringBuilder.append(philosophers[i].toString() + " | Average Thinking Time: " + philosophers[i].getAverageThinkingTime() + " | Average Eating Time " + philosophers[i].getAverageEatingTime() + " | Average Hungry Time " + philosophers[i].getAverageHungryTime()+ "\n");
         }
+        PrintWriter printWriter = new PrintWriter("testAverage.txt" , "UTF-8");
+        printWriter.println(stringBuilder.toString());
+        printWriter.close();
     }
 
     private void setUpCircles() {

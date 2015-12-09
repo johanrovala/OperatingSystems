@@ -3,7 +3,6 @@ package Model;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.*;
 
-import java.io.PrintWriter;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -14,7 +13,6 @@ public class Chopstick {
     private boolean isAvailable = true;
     Rectangle chopstickObject;
 
-    PrintWriter myStatisticsFile;
 
     public Chopstick(Rectangle chopstickObject){
         this.chopstickObject = chopstickObject;
@@ -25,7 +23,6 @@ public class Chopstick {
         reentrantLock.lock();
         this.chopstickObject.setFill(Paint.valueOf("#8b282a"));
         System.out.println(chosenOne + " picked up " + leftOrRight + " chopstick");
-        myStatisticsFile.println(chosenOne + " picked up " + leftOrRight + " chopstick");
         isAvailable = false;
     }
 
@@ -34,7 +31,6 @@ public class Chopstick {
             reentrantLock.unlock();
             this.chopstickObject.setFill(Paint.valueOf("#28e7b2"));
             System.out.println(chosenOne + " put down " + leftOrRight + " chopstick");
-            myStatisticsFile.println(chosenOne + " put down " + leftOrRight + " chopstick");
             isAvailable = true;
         }
     }
@@ -43,8 +39,5 @@ public class Chopstick {
         return isAvailable;
     }
 
-    public void setMyStatisticsFile(PrintWriter myStatisticsFile){
-        this.myStatisticsFile = myStatisticsFile;
-    }
 
 }
