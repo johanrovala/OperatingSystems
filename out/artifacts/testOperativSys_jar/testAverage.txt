@@ -1,0 +1,6 @@
+Philosopher number 0 | Average Thinking Time: 3.0 | Average Eating Time 10.0 | Average Hungry Time 1.0
+Philosopher number 1 | Average Thinking Time: 4.5 | Average Eating Time 2.5 | Average Hungry Time 0.0
+Philosopher number 2 | Average Thinking Time: 4.0 | Average Eating Time 8.0 | Average Hungry Time 0.0
+Philosopher number 3 | Average Thinking Time: 4.0 | Average Eating Time 4.25 | Average Hungry Time 0.5
+Philosopher number 4 | Average Thinking Time: 2.3333333333333335 | Average Eating Time 2.5 | Average Hungry Time 0.0
+

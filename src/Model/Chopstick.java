@@ -18,6 +18,9 @@ public class Chopstick {
         this.chopstickObject = chopstickObject;
     }
 
+    /*
+     * Method for picking up the Chopstick Object
+     */
 
     public void pickUp(Philosopher chosenOne, String leftOrRight) throws InterruptedException {
         reentrantLock.lock();
@@ -25,6 +28,10 @@ public class Chopstick {
         System.out.println(chosenOne + " picked up " + leftOrRight + " chopstick");
         isAvailable = false;
     }
+
+    /*
+     * Method for putting down the Chopstick Object
+     */
 
     public void putDown(Philosopher chosenOne, String leftOrRight) throws InterruptedException {
         if(reentrantLock.isHeldByCurrentThread()){
@@ -34,6 +41,11 @@ public class Chopstick {
             isAvailable = true;
         }
     }
+
+
+    /*
+     * Declares if Chopstick is available
+     */
 
     public boolean isAvailable(){
         return isAvailable;

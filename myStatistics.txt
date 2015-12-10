@@ -1,33 +1,145 @@
 Philosopher number 0 is thinking
-Philosopher number 2 is thinking
 Philosopher number 4 is thinking
-Philosopher number 1 is thinking
 Philosopher number 3 is thinking
-Philosopher number 1 is hungry
-Philosopher number 1 picked up left chopstick
-Philosopher number 1 picked up right chopstick
-Philosopher number 1 is eating
-Philosopher number 3 is hungry
-Philosopher number 3 picked up left chopstick
-Philosopher number 3 picked up right chopstick
-Philosopher number 3 is eating
-Philosopher number 1 put down left chopstick
-Philosopher number 1 put down right chopstick
-Philosopher number 4 is hungry
+Philosopher number 2 is thinking
 Philosopher number 1 is thinking
 Philosopher number 2 is hungry
 Philosopher number 2 picked up left chopstick
+Philosopher number 2 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 1.0
+Philosopher number 2 is eating
+Philosopher number 4 is hungry
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 picked up right chopstick
+TESTFITTA: 0
+averageFittaTime: 0.0
+Philosopher number 4 is eating
+Philosopher number 1 is hungry
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 put down left chopstick
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 put down left chopstick
+Philosopher number 3 is hungry
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 put down left chopstick
+Philosopher number 0 is hungry
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 put down left chopstick
 Philosopher number 2 put down left chopstick
+Philosopher number 2 put down right chopstick
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 1.0
+Philosopher number 1 is eating
+Philosopher number 2 is thinking
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 put down right chopstick
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 1.0
+Philosopher number 3 is eating
+Philosopher number 4 is thinking
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 4 is hungry
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 1 put down left chopstick
+Philosopher number 1 put down right chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 3 put down right chopstick
+Philosopher number 0 picked up left chopstick
+Philosopher number 0 picked up right chopstick
+TESTFITTA: 0
+averageFittaTime: 0.0
+Philosopher number 0 is eating
+Philosopher number 1 is thinking
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 3 is thinking
+Philosopher number 2 is hungry
+Philosopher number 2 picked up left chopstick
+Philosopher number 2 picked up right chopstick
+TESTFITTA: 0
+averageFittaTime: 1.0
+Philosopher number 2 is eating
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 2 put down left chopstick
+Philosopher number 2 put down right chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 2 is thinking
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 1 is hungry
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
+Philosopher number 0 put down left chopstick
+Philosopher number 0 put down right chopstick
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 2.0
+Philosopher number 1 is eating
+Philosopher number 2 is hungry
+Philosopher number 3 is hungry
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 picked up right chopstick
+TESTFITTA: 0
+averageFittaTime: 1.0
+Philosopher number 3 is eating
+Philosopher number 0 is thinking
+Philosopher number 1 put down left chopstick
+Philosopher number 1 put down right chopstick
+Philosopher number 2 picked up left chopstick
+Philosopher number 2 put down left chopstick
+Philosopher number 1 is thinking
+Philosopher number 3 put down left chopstick
+Philosopher number 3 put down right chopstick
 Philosopher number 0 is hungry
 Philosopher number 0 picked up left chopstick
 Philosopher number 0 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 1.0
 Philosopher number 0 is eating
 Philosopher number 2 picked up left chopstick
-Philosopher number 2 put down left chopstick
-Philosopher number 3 put down left chopstick
-Philosopher number 3 put down right chopstick
-Philosopher number 2 picked up left chopstick
 Philosopher number 2 picked up right chopstick
+TESTFITTA: 0
+averageFittaTime: 1.0
 Philosopher number 2 is eating
 Philosopher number 4 picked up left chopstick
 Philosopher number 4 put down left chopstick
@@ -39,46 +151,11 @@ Philosopher number 4 picked up left chopstick
 Philosopher number 4 put down left chopstick
 Philosopher number 4 picked up left chopstick
 Philosopher number 4 put down left chopstick
-Philosopher number 0 put down left chopstick
-Philosopher number 0 put down right chopstick
-Philosopher number 1 picked up left chopstick
-Philosopher number 1 put down left chopstick
-Philosopher number 4 picked up left chopstick
-Philosopher number 4 picked up right chopstick
-Philosopher number 4 is eating
-Philosopher number 0 is thinking
-Philosopher number 1 picked up left chopstick
-Philosopher number 1 put down left chopstick
-Philosopher number 2 put down left chopstick
-Philosopher number 2 put down right chopstick
-Philosopher number 1 picked up left chopstick
-Philosopher number 1 picked up right chopstick
-Philosopher number 1 is eating
-Philosopher number 0 is hungry
-Philosopher number 2 is thinking
-Philosopher number 4 put down left chopstick
-Philosopher number 4 put down right chopstick
 Philosopher number 3 is hungry
-Philosopher number 3 picked up left chopstick
-Philosopher number 3 picked up right chopstick
-Philosopher number 3 is eating
-Philosopher number 0 picked up left chopstick
-Philosopher number 0 put down left chopstick
-Philosopher number 4 is thinking
-Philosopher number 0 picked up left chopstick
-Philosopher number 0 put down left chopstick
-Philosopher number 1 put down left chopstick
-Philosopher number 1 put down right chopstick
-Philosopher number 0 picked up left chopstick
-Philosopher number 0 picked up right chopstick
-Philosopher number 0 is eating
-Philosopher number 1 is thinking
-Philosopher number 3 put down left chopstick
-Philosopher number 3 put down right chopstick
-Philosopher number 4 is hungry
 Philosopher number 4 picked up left chopstick
 Philosopher number 4 put down left chopstick
-Philosopher number 3 is thinking
+Philosopher number 4 picked up left chopstick
+Philosopher number 4 put down left chopstick
 Philosopher number 4 picked up left chopstick
 Philosopher number 4 put down left chopstick
 Philosopher number 4 picked up left chopstick
@@ -87,40 +164,42 @@ Philosopher number 0 put down left chopstick
 Philosopher number 0 put down right chopstick
 Philosopher number 4 picked up left chopstick
 Philosopher number 4 picked up right chopstick
+TESTFITTA: 0
+averageFittaTime: 0.0
 Philosopher number 4 is eating
-Philosopher number 1 is hungry
 Philosopher number 1 picked up left chopstick
-Philosopher number 1 picked up right chopstick
-Philosopher number 1 is eating
-Philosopher number 0 is thinking
-Philosopher number 2 is hungry
-Philosopher number 3 is hungry
-Philosopher number 3 picked up left chopstick
-Philosopher number 3 put down left chopstick
-Philosopher number 4 put down left chopstick
-Philosopher number 4 put down right chopstick
-Philosopher number 0 is hungry
-Philosopher number 3 picked up left chopstick
-Philosopher number 3 picked up right chopstick
-Philosopher number 3 is eating
-Philosopher number 4 is thinking
 Philosopher number 1 put down left chopstick
-Philosopher number 1 put down right chopstick
-Philosopher number 2 picked up left chopstick
-Philosopher number 2 put down left chopstick
-Philosopher number 1 is thinking
-Philosopher number 2 picked up left chopstick
-Philosopher number 2 put down left chopstick
-Philosopher number 3 put down left chopstick
-Philosopher number 3 put down right chopstick
-Philosopher number 2 picked up left chopstick
-Philosopher number 2 picked up right chopstick
-Philosopher number 2 is eating
-Philosopher number 3 is thinking
-Philosopher number 1 is hungry
-Philosopher number 3 is hungry
+Philosopher number 0 is thinking
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 put down left chopstick
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 put down left chopstick
 Philosopher number 2 put down left chopstick
 Philosopher number 2 put down right chopstick
-Philosopher number 4 is hungry
+Philosopher number 0 is hungry
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 put down left chopstick
+Philosopher number 1 picked up left chopstick
+Philosopher number 1 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 3.0
+Philosopher number 1 is eating
 Philosopher number 2 is thinking
+Philosopher number 4 put down left chopstick
+Philosopher number 4 put down right chopstick
+Philosopher number 3 picked up left chopstick
+Philosopher number 3 picked up right chopstick
+TESTFITTA: 1
+averageFittaTime: 2.0
+Philosopher number 3 is eating
+Philosopher number 4 is thinking
+Philosopher number 3 put down left chopstick
+Philosopher number 3 put down right chopstick
+Philosopher number 3 is thinking
+Philosopher number 1 put down left chopstick
+Philosopher number 1 put down right chopstick
+Philosopher number 1 is thinking
+Philosopher number 4 is hungry
+Philosopher number 3 is hungry
 Philosopher number 2 is hungry
+Philosopher number 1 is hungry

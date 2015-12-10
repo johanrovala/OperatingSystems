@@ -3,7 +3,6 @@ package Model;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-import java.io.PrintWriter;
 import java.util.Random;
 
 /**
@@ -26,6 +25,10 @@ public class Philosopher implements Runnable{
     private double averageEatingTime = 0;
     private double averageHungryTime = 0;
 
+    private int numbTimesThinking = 0;
+    private int numbTimesEating = 0;
+    private int numbTimesHungry = 0;
+    private int res = 0;
 
     // Gui Object
     Circle circleObject;
@@ -57,7 +60,8 @@ public class Philosopher implements Runnable{
                             long end1 = System.currentTimeMillis();
 
                             // Calculating and adding the time spent hungry
-                            averageHungryTime += (end1 - start1) / 1000;
+                            this.res = (int) (end1 - start1);
+                            this.averageHungryTime += this.res;
 
                             // Eat
                             eating();
@@ -71,8 +75,6 @@ public class Philosopher implements Runnable{
                 while (!isHungry) {
                     thinking();
                     hungry();
-                  //  int i = randomNumb.nextInt(2000)+1000;
-                  //  Thread.sleep(i);
                     break;
                 }
 
@@ -82,29 +84,47 @@ public class Philosopher implements Runnable{
         }
     }
 
+    /*
+     * Method for eating state
+     */
+
     public void eating() throws InterruptedException {
         System.out.println(this.toString() + " is eating");
         isHungry = false;
         this.circleObject.setFill(Paint.valueOf("#8b282a"));
+        numbTimesEating++;
         int i = randomNumb.nextInt(5000)+1000;
         averageEatingTime += i / 1000;
         Thread.sleep(i);
     }
 
+    /*
+     * Method for thinking state
+     */
+
     public void thinking() throws InterruptedException {
         System.out.println(this.toString() + " is thinking");
         isHungry = true;
         this.circleObject.setFill(Paint.valueOf("#28e7b2"));
+        numbTimesThinking++;
         int i = randomNumb.nextInt(5000)+1000;
         averageThinkingTime += i/1000;
         Thread.sleep(i);
     }
 
+    /*
+     * Method for hungry state
+     */
+
     public void hungry() throws InterruptedException{
         System.out.println(this.toString() + " is hungry");
         this.circleObject.setFill(Paint.valueOf("#d7b3ff"));
+        numbTimesHungry++;
     }
 
+    /*
+     * Method for 'stopping' the thread.
+     */
     public void kill(){
         isRunning = false;
     }
@@ -114,15 +134,20 @@ public class Philosopher implements Runnable{
         return "Philosopher number " + philosopherNumber;
     }
 
+
+    /*
+     * Getters for the average time variables
+     */
+
     public double getAverageThinkingTime() {
-        return averageThinkingTime;
+        return this.averageThinkingTime / numbTimesThinking;
     }
 
     public double getAverageEatingTime() {
-        return averageEatingTime;
+        return this.averageEatingTime / numbTimesEating;
     }
 
     public double getAverageHungryTime() {
-        return averageHungryTime;
+        return this.averageHungryTime / numbTimesHungry;
     }
 }

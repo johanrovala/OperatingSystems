@@ -27,6 +27,7 @@ public class Controller {
     Circle[] philosopherCircleList = new Circle[5];
     Rectangle[] chopstickRectangleList = new Rectangle[5];
 
+    // Fetching GUI Objects from scenebuilder
 
     @FXML
     private Circle philosopherCircle1;
@@ -58,7 +59,11 @@ public class Controller {
     @FXML
     private GridPane rootLayout;
 
+    // File object for average times.
+
     File file = new File("myStatistics.txt");
+
+    // Starts the program.
 
     @FXML
     private void startTheThreads() throws FileNotFoundException, UnsupportedEncodingException {
@@ -82,6 +87,8 @@ public class Controller {
         }
     }
 
+    // Stops the program.
+
     @FXML
     private void stopTheThreads() throws FileNotFoundException, UnsupportedEncodingException {
         for(int i = 0; i< amountOfPhilosophers; i++){
@@ -93,6 +100,8 @@ public class Controller {
         printWriter.println(stringBuilder.toString());
         printWriter.close();
     }
+
+    // Setting up GUI Objects
 
     private void setUpCircles() {
         philosopherCircleList[0] = philosopherCircle1;
